@@ -1,6 +1,7 @@
 package com.source.administrator.fragementtest;
 
 
+import android.app.Activity;
 import android.app.ListFragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -21,9 +22,9 @@ public class WorkoutListFragement extends ListFragment {
     public WorkoutListFragement() {
         // Required empty public constructor
     }
-    static interface  WorkoutListListener{
+    public interface  WorkoutListListener{
         void itemClicked(long id);
-    };
+    }
             private WorkoutListListener listener;
 
     @Override
@@ -37,21 +38,15 @@ public class WorkoutListFragement extends ListFragment {
 
         return super.onCreateView(inflater,container,savedInstanceState);
     }
-    public void onAttach(MainActivity activity) {
+    public void onAttach(Activity activity) {
         super.onAttach(activity);
-        this.listener=(WorkoutListListener) activity;
+        this.listener=(WorkoutListListener)activity;
     }
 
 
-
-   /* @Override
-    protected void onAttach(Activity activity)
-    {
-        super.onAttach(activity);
-    }
-*/
     @Override
     public void onListItemClick(ListView l,View v,int position,long id) {
+        super.onListItemClick(l,v,position,id);
         if(listener!=null)
             listener.itemClicked(id);
     }

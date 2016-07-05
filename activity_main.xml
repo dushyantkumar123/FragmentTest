@@ -7,22 +7,29 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.source.administrator.fragementtest.MainActivity">
-    <!--  <FrameLayout
-          android:id="@+id/frag_container"
-          android:layout_width="0dp"
-          android:layout_weight="3"
-          android:layout_height="match_parent"/>-->
+    android:orientation="horizontal"
+    tools:context="com.source.administrator.fragementtest.MainActivity"
+    android:weightSum="1">
       <fragment
           class="com.source.administrator.fragementtest.WorkoutListFragement"
           android:id="@+id/list_frag"
           android:layout_width="0dp"
-          android:layout_weight="2"
-          android:layout_height="match_parent"/>
-    <fragment
+          android:layout_height="match_parent"
+          android:layout_weight="0.25"
+           />
+      <FrameLayout
+          android:id="@+id/frag_container"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="0.75" />
+
+
+
+
+      <!--<fragment
         class="com.source.administrator.fragementtest.WorkoutDetailFragement"
         android:id="@+id/WorkoutDetailFragement"
         android:layout_width="0dp"
         android:layout_weight="3"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"/>-->
 </LinearLayout>

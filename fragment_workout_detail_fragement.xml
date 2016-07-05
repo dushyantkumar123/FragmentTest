@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/textDescription"
-        android:layout_weight="0.20"
+
         android:layout_gravity="center_horizontal" />
 
     <TextView
@@ -23,8 +23,19 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/textTitle"
-        android:layout_gravity="center_horizontal|top"
-        android:layout_weight="1.08" />
+        android:layout_gravity="center_horizontal" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button"
+        android:onClick="buttonClicked"
+        android:layout_gravity="center_horizontal" />
+    <!--  <FrameLayout
+          android:id="@+id/stopwatch_container"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+  -->
 
 </LinearLayout>
